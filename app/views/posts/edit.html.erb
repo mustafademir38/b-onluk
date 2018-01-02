@@ -1,0 +1,60 @@
+<div class="container">
+  
+  <div class="row">
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><%= t ("Uygulamam")%></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#"><%= t ("Ana Sayfa")%></a></li>
+      <li><a href="#"><%= t ("Hakkımızda")%></a></li>
+      <li><a href="#"><%= t ("Referanslar")%></a></li>
+      <li><a href="#"><%= t ("iletisim")%></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+     <li><a href="?locale=tr"><img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/48/Turkey_flat.png" width="32" height="32"></a></li>
+     <li><a href="?locale=en"><img src="https://cdn2.iconfinder.com/data/icons/flags/flags/32/united-kingdom-great-britain.png" width="32" height="32"></a></li>
+     <li><a href="?locale=fr"><img src="http://marinbayraklar.com/image/cache/catalog/fransiz%20bayragi/Flag%20of%20France-500x500.png" width="32" height="32"></a></li>
+     <li><%= link_to t('Oturumu Kapat'), destroy_user_session_path, :method => :delete %></li>
+
+    </ul>
+  </div>
+</nav>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <marquee align="middle" scrollamount="10" onmouseout="this.start()" onmouseover="this.stop()" behavior="slide" direction="down"scrolldelay="1">
+        <div class="thumbnail">
+        <img src="http://www.istesob.org.tr/wp-content/uploads/2015/06/istanbul-manzara.jpg" alt="Paris" width="400" height="300">
+      </div>      
+      <div class="thumbnail">
+        <img src="https://i.ytimg.com/vi/mrF43MD_pXs/maxresdefault.jpg" alt="Paris" width="400" height="300">
+      </div>  
+      <div class="thumbnail">
+        <img src="https://www.duvarkapla.com/media/catalog/product/cache/9/image/750x/17f82f742ffe127f42dca9de82fb58b1/T/R/TR0065.jpg" alt="Paris" width="400" height="300">
+      </div>  
+      <div class="thumbnail">
+        <img src="http://www.istesob.org.tr/wp-content/uploads/2015/06/istanbul-manzara.jpg" alt="Paris" width="400" height="300">
+      </div> 
+      </marquee>
+    </div>
+    <div class="col-md-9">
+     <h1><%= t "Mesaj Düzenlenmesi" %></h1>
+      <hr/>
+<%= render 'form' %>
+
+<%= link_to t('Göster'), @post %> |
+<%= link_to t('Geri'), posts_path %>
+      
+    </div>
+    
+  </div>
+  <div class="row">
+    <footer class="container-fluid text-center">
+  <p>SEBAHATTİN GÜÇLÜ 16541905 YAZILIM MÜHENDİSLİĞİ </p>
+</footer>
+  
+  </div>
+  
+</div>
